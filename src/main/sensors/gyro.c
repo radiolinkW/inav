@@ -48,6 +48,7 @@
 #include "drivers/accgyro/accgyro_icm20689.h"
 #include "drivers/accgyro/accgyro_icm42605.h"
 #include "drivers/accgyro/accgyro_lsm6dxx.h"
+#include "drivers/accgyro/accgyro_lsm6dsk320x.h"
 #include "drivers/accgyro/accgyro_fake.h"
 #include "drivers/io.h"
 
@@ -223,6 +224,15 @@ STATIC_UNIT_TESTED gyroSensor_e gyroDetect(gyroDev_t *dev, gyroSensor_e gyroHard
     case GYRO_LSM6DXX:
         if (lsm6dGyroDetect(dev)) {
             gyroHardware = GYRO_LSM6DXX;
+            break;
+        }
+        FALLTHROUGH;
+#endif
+
+#ifdef USE_IMU_LSM6DSK320X
+    case GYRO_LSM6DSK320X:
+        if(lsm6dsk320xGyroDetect(dev)){
+            gyroHardware = GYRO_LSM6DSK320X;
             break;
         }
         FALLTHROUGH;

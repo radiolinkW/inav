@@ -82,6 +82,10 @@
         BUSDEV_REGISTER_SPI(busdev_lsm6dxx,      DEVHW_LSM6D,       LSM6DXX_SPI_BUS,     LSM6DXX_CS_PIN,      NONE,  DEVFLAGS_NONE,  IMU_LSM6DXX_ALIGN);
     #endif
 
+    #if defined(USE_IMU_LSM6DSK320X)
+        BUSDEV_REGISTER_SPI(busdev_lsm6dsk320x,      DEVHW_LSM6DSK320X,       LSM6DSK320X_SPI_BUS,     LSM6DSK320X_CS_PIN,      NONE,  DEVFLAGS_NONE,  IMU_LSM6DSK320X_ALIGN);
+    #endif
+
 #endif
 
 
