@@ -95,6 +95,7 @@ typedef enum {
     DEVHW_MS5611,
     DEVHW_MS5607,
     DEVHW_LPS25H,
+    DEVHW_LPS22HB,
     DEVHW_SPL06,
     DEVHW_BMP388,
     DEVHW_DPS310,

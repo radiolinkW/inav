@@ -116,6 +116,8 @@ main_sources(COMMON_SRC
     drivers/barometer/barometer_fake.h
     drivers/barometer/barometer_lps25h.c
     drivers/barometer/barometer_lps25h.h
+    drivers/barometer/barometer_lps22hb.c
+    drivers/barometer/barometer_lps22hb.h
     drivers/barometer/barometer_ms56xx.c
     drivers/barometer/barometer_ms56xx.h
     drivers/barometer/barometer_spl06.c

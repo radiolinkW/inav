@@ -149,6 +149,12 @@
     #endif
 #endif
 
+#if defined(USE_BARO_LPS22HB)
+    #if defined(LPS22HB_SPI_BUS)
+    BUSDEV_REGISTER_SPI(busdev_lps22hb,     DEVHW_LPS22HB,      LPS22HB_SPI_BUS,    LPS22HB_CS_PIN,     NONE,           DEVFLAGS_NONE,      0);
+    #endif
+#endif
+
 #if defined(USE_BARO_MS5607)
     #if !defined(MS5607_I2C_BUS)
         #define MS5607_I2C_BUS BARO_I2C_BUS
